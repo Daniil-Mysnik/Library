@@ -25,6 +25,8 @@ public class User {
     String phone;
     String email;
     String documentNumber;
+    @Enumerated(EnumType.STRING)
+    UserType userType;
     @ManyToMany
     @JoinTable(name = "users_books",
                joinColumns = {@JoinColumn(name = "fk_user")},
